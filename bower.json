@@ -1,0 +1,24 @@
+{
+  "name": "ojakhuri-delivery",
+  "description": "ojakhuri-delivery apart hotel",
+  "main": "index.js",
+  "authors": [
+    "Alexander Dolgan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ojakhuri-delivery",
+    "aparthotel"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
+}

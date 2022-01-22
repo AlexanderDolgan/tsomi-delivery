@@ -1,0 +1,78 @@
+.button {
+	font-size: 2rem;
+	font-weight: 500;
+	padding: 1.25rem 2.5rem;
+	background-color: ac(black);
+	color: ac(white);
+	border: none;
+	box-shadow: 0 0 1rem rgba(0,0,0,.1);
+	transition: box-shadow .33s ease-in-out,
+	background-color .1s ease-in-out;
+	border-radius: .5rem;
+}
+
+.button:hover {
+	box-shadow: 0 1.5rem 1.5rem rgba(0,0,0,.45);
+	background-color: ac(lightgray);
+	color: ac(black);
+}
+
+.button:active,
+.button:focus {
+	color: ac(secondary);
+}
+
+.btn-ghost {
+	background-color: transparent;
+	border: .2rem solid ac(text);
+	color: ac(text);
+	padding: 1rem 1.5rem;
+}
+
+.btn-ghost:hover {
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+	color: ac(text);
+	text-decoration: none;
+}
+
+.btn-ghost:active,
+.btn-text:focus {
+	background-color: ac(lightgray, tint);
+	color: ac(text);
+}
+
+.btn-text {
+	background-color: transparent;
+	border: none;
+	color: ac(text);
+	padding: 1rem 1.5rem;
+}
+
+.btn-text:hover {
+	color: ac(secondary);
+	text-decoration: none;
+}
+
+.btn-text:active,
+.btn-text:focus {
+	color: ac(secondary);
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+	font-size: 1.75rem;
+	font-weight: bold;
+	padding: 2rem 3rem;
+	background-color: ac(primary);
+	color: ac(text);
+	border: none;
+	box-shadow: 0 0 1rem rgba(0,0,0,.1);
+	transition: box-shadow .33s ease-in-out,
+	background-color .1s ease-in-out;
+
+}
+
+.woocommerce #respond input#submit:hover, .woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover {
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.25);
+	color: ac(secondary);
+	background-color: ac(primary);
+}

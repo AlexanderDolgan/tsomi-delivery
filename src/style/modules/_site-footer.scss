@@ -1,0 +1,14 @@
+#site-footer {
+	margin: 2rem 0 6rem;
+	@media (min-width: $b-xlarge) {
+		margin: 3rem 0 6rem;
+	}
+	& .guliani-logo img {
+		display: block;
+		width: 21.25rem;
+		margin: 0 auto;
+		@media (min-width: $b-xxlarge) {
+			width: 26rem;
+		}
+	}
+}

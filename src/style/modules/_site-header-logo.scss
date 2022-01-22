@@ -1,0 +1,32 @@
+//site header logo
+.site-header .site-header__logo {
+	margin-top: 1.25rem;
+	@media (min-width: $b-medium) {
+		flex-grow: 1;
+	}
+}
+
+.site-header .site-header__logo path {
+	fill: ac(black);
+}
+
+.start-page .site-header .site-header__logo path {
+	fill: ac(white);
+}
+
+.site-header .site-header__logo .logo-small {
+	@media (min-width: $b-medium) {
+		display: none;
+	}
+}
+
+.site-header .site-header__logo .logo-extend {
+	display: none;
+	@media (min-width: $b-medium) {
+		display: block;
+		width: 15rem;
+	}
+	@media (min-width: $b-large) {
+		width: 18.5rem;
+	}
+}

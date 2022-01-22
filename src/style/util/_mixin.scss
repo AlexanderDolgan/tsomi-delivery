@@ -1,0 +1,38 @@
+//clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//container mixin with max width
+@mixin container ($pad-vert-small:8rem, $pad-vert:16rem, $max-width: $container) {
+	position: relative;
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: $pad-vert-small 0;
+	@media (min-width: $b-large) {
+		padding: $pad-vert 2rem;
+	}
+	// @include clearfix;
+}
+
+
+//bg img responsive
+@mixin bg-image($padding-top: 100%) {
+	padding-top: $padding-top;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: 0;
+	display: block;
+}
+
+// @mixin bg-image($padding-top: 100%) {
+// 	min-width: 100%;
+// 	height: auto;
+// 	display: block;
+// }

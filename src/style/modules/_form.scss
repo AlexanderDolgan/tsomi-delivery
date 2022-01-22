@@ -1,0 +1,11 @@
+input {
+	padding: 1.5rem;
+	font-size: 2rem;
+	border: none;
+	border: solid 1px ac(primary);
+	width: 100%;
+}
+
+textarea {
+	@extend input;
+}

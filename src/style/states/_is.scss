@@ -1,0 +1,31 @@
+.is-scale-1x {
+	transform: scale(1);
+}
+
+.is-opacity {
+	opacity: 1;
+}
+
+.is-desaturate {
+	color: mix(white, ac(text), 50%);	
+}
+
+.is-sticky {
+	background-color: ac(black);
+	z-index: 111;
+	& ul li a {
+		// color: ac(text) !important;
+	}
+}
+
+.is-always-sticky {
+	background-color: ac(white);
+	top: 0;
+	& ul li a {
+		color: ac(text) !important;
+	}
+}
+
+.is-hide {
+	display: none;
+}

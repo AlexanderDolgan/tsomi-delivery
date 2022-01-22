@@ -1,0 +1,64 @@
+//main settings
+
+@import "mixin";
+
+//Global
+// $global-font-family: 'kazimir', serif;
+$global-font-family: 'tsomi-regular', sans-serif;
+$second-font-family: 'tsomi-bold', sans-serif;
+$third-font-family: 'tsomi-italic', sans-serif;
+$global-font-size: 8px;
+$global-font-weight: 400;
+$body-font-size: 2rem;
+$global-line-height: 1.25;
+$font-smooth: antialiased;
+
+//Colors
+$colors: (
+	primary: hsl(37, 100%, 84%),
+	secondary: hsl(24, 58%, 58%),
+	third: hsl(153, 28%, 75%),
+	fourth: hsl(38, 100%, 98%),
+	text: hsl(0,0%,17%),
+	text-col: hsl(39, 9%, 61%),
+	text-col2: hsl(19, 8%, 40%),
+	accept: hsl(90,45%,45%),
+	alert: hsl(0,100%,70%),
+	white: hsl(0,0%,100%),
+	black: hsl(0,0%,17%),
+	gray: hsl(0,0%,60%),
+	lightgray: hsl(0,0%,92%),
+);
+
+$body-background: #f5f4f8;
+$body-font-color: ac(text);
+
+// Media q breakpoints
+
+$b-xsmall: 0;
+$b-small: 321px;
+$b-medium-advance: 640px;
+$b-medium: 768px;
+$b-large: 1024px;
+$b-xlarge: 1280px;
+$b-xlarge-h: 1440px;
+$b-xxlarge: 1600px;
+$b-xxxlarge: 1920px;
+
+$b-small-only: 0 319px;
+$b-medium-only: (max-width: 960px) and (min-width: 320px);
+$b-large-only: 960px;
+
+//container width
+$container-l: 1440px;
+$container-m: 1280px;
+
+//Typography
+
+$paragraph-lineheight: $global-line-height;
+
+$header-font-family: $global-font-family;
+$header-font-weight: normal;
+$header-color: $body-font-color;
+$header-text-transform: none;
+$header-lineheight: 1.3;

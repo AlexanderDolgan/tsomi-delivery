@@ -1,0 +1,131 @@
+// base ressets and settings
+
+*, *+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	// min-height: 100%;
+	font-size: $global-font-size;
+	// @media (min-width: $b-medium) {
+	// 	height: auto;
+	// }
+	letter-spacing: 0.05rem;
+}
+
+body {
+	font-size: $body-font-size;
+	font-family: $global-font-family;
+	font-weight: $global-font-weight;
+	line-height: $global-line-height;
+	background-color: $body-background;
+	-webkit-font-smoothing: $font-smooth;
+	color: ac(text);
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: ac(text);
+	&:hover,
+	&:active,
+	&:focus {
+		color: ac(black, shade);
+		text-decoration: underline;
+	}
+}
+
+button {
+	font-family: $global-font-family;
+	outline: none;
+}
+
+//Address
+address {
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Paragraphs
+p {
+	line-height: $paragraph-lineheight;
+	margin-bottom: 0;
+	margin-top: 2rem;
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+	font-weight: $header-font-weight;
+	color: $header-color;
+	text-transform: $header-text-transform;
+	line-height: $header-lineheight;
+	margin: 0;
+	position: relative;
+}
+
+
+h1 {font-size: 45px;}
+h2 {font-size: 30px;}
+h3 {font-size: 18px;}
+h4 {font-size: 16px;}
+h5 {font-size: 14px;}
+h6 {font-size: 14px;}
+
+@media (min-width: $b-medium) {
+	h1 {font-size: 56px;}
+	h3 {font-size: 18px;}
+}
+
+@media (min-width: $b-xxlarge) {
+	h1 {font-size: 72px;}
+	h2 {font-size: 36px;}
+}
+
+//Bloquote
+blockquote {
+	background: #f9f9f9;
+	border-left: 3px solid cv(primary);
+	margin: 1.5em 10px;
+	padding: 0.5em 10px;
+	quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+	color: cv(primary);
+	content: open-quote;
+	font-size: 3em;
+	line-height: 0.1em;
+	margin-right: 0.25em;
+	vertical-align: -0.4em;
+}
+
+blockquote p {
+	display: inline;
+}
+//end Bloquote
+
+dd {
+	margin: 0;
+}
+
+img {
+	// background-color: ac(third, shade, sat);
+	// animation: show 2s;
+	// animation-iteration-count: 1;
+}
+
+@keyframes show {
+  from {opacity: 0;}
+  to {opacity:1;}
+}

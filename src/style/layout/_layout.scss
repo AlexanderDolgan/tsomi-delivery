@@ -1,0 +1,91 @@
+//main layouts
+.container {
+	max-width: 180rem;
+	margin: 0 auto;
+}
+
+//main site container
+#site-wrapper {
+	position: relative;
+	height: 100%;
+	padding: 2rem;
+	@media (min-width: 180rem) {
+		padding: 0;
+	}
+}
+
+.start-page {
+	padding: 0;
+	height: calc( 100% - 5rem);
+	display: flex;
+	flex-flow: row nowrap;
+	align-content: center;
+	justify-content: center;
+	padding: 0 2rem;
+	@media (min-width: $b-medium) {
+		height: calc( 100% - 8rem);
+	}
+}
+
+#rest-header {
+	position: relative;
+	@media (min-width: $b-large) {
+		padding-top: 4rem;
+	}
+}
+
+main {
+	@extend .container;
+	padding: 4rem 0;
+	display: flex;
+	flex-flow: row nowrap;
+	@media (min-width: $b-xlarge) {
+		padding: 9rem 0;
+	}
+}
+
+main .rest-nav {
+	display: none;
+	min-width: 39.25rem;
+	@media (min-width: $b-xlarge) {
+		display: block;
+		width: math.div(3,12);
+	}
+}
+
+.main-products {
+	@media (min-width: $b-xlarge) {
+		width: math.div(9,12);
+		margin-left: 6.5rem;
+	}
+}
+
+.woocommerce ul.products[class*="columns-"] li.product, .woocommerce-page ul.products[class*="columns-"] li.product {
+	margin-right: 2%;
+}
+
+#main {
+	height: 100%;
+	background-color: ac(white);
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+#site-header {
+	padding: 4rem 0;
+	background-color: ac(primary);
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -2rem;
+		display: block;
+		width: 100%;
+		height: 2.6rem;
+		background-image: url('../img/assets/bot_primary.png');
+	}
+}
+
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last {
+	width: 100%;
+}

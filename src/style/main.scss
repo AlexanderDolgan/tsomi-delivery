@@ -1,0 +1,58 @@
+/*
+Theme Name: page20
+Author: AD
+Author URI:
+Version: 1.0
+*/
+
+// @font-face {
+// 	font-family: 'kazimir';
+// 	src: url('../CSTMFontsKazimir.woff') format('woff');
+// 	font-weight: normal;
+// 	font-style: normal;
+// }
+
+@use "sass:math";
+
+@font-face {
+	font-family: 'tsomi-regular';
+	src: url('../fonts/tsomi-regular.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'tsomi-bold';
+	src: url('../fonts/tsomi-bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'tsomi-italic';
+	src: url('../fonts/tsomi-itallic.woff') format('woff');
+}
+
+// @use 'util/settings';
+// @forward 'util/settings';
+
+//settings-var
+@import "util/function";
+@import "util/settings"; //vars
+@import "util/mixin";
+//sprites
+@import "util/sprite";
+
+//base
+@import "base/base"; //main settings ressets
+
+//layout
+@import "layout/index";
+
+//modules
+@import "modules/index";
+
+//states
+@import "states/index";
+
+@import "../../bower_components/lightgallery/src/sass/lightgallery.scss";
+
+.lg-download {
+	display: none;
+}

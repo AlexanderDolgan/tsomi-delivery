@@ -1,0 +1,45 @@
+{
+  "name": "oj-del",
+  "version": "1.0.0",
+  "description": "oj-del apart hotel",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "oj-del",
+    "aparthotel"
+  ],
+  "author": "Alexander Dolgan",
+  "license": "ISC",
+  "devDependencies": {
+    "4": "^0.0.0",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.8",
+    "autoprefixer": "^9.8.8",
+    "browser-sync": "^2.27.7",
+    "clean-css": "^5.2.2",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^6.0.1",
+    "imagemin-jpeg-recompress": "^6.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-optipng": "^7.1.0",
+    "imagemin-svgo": "^7.1.0",
+    "postcss": "^8.4.5",
+    "sass": "^1.36.0"
+  },
+  "dependencies": {
+    "gulp-newer": "^1.4.0"
+  }
+}

@@ -1,0 +1,75 @@
+main
+	aside.rest-nav
+		ul.menu-category
+			li Основное меню
+				ul.menu-content
+					li.active
+						a(href="#") Выпечка
+					li 
+						a(href="#") Хинкали
+					li 
+						a(href="#") Чебуреки
+					li 
+						a(href="#") Пончики
+					li 
+						a(href="#") Горячие блюда
+					li 
+						a(href="#") Супы
+					li 
+						a(href="#") Соусы
+			li Напитки
+				ul.menu-content
+					li 
+						a(href="#") Безалкогольные напитки
+		.separator
+		ul.rest-nav-footer
+			li 
+				address
+					ul.address
+						li
+							a(href="map.yandex.ru") Фудмолл ДЕПО, Лесная, 20, стр. 3
+						li
+							a(href="tel:+7 (968) 500-30-05").phone т. +7 (968) 500-30-05
+			li
+				a(href="#") Вакансии
+			li
+				a(href="#") Реквизиты
+			li
+				a(href="#").logo-guliani
+					img(src="../img/assets/brand/gg-logo.svg", alt="Guliani logo")
+			li
+				a(href="#").btn-back
+					img(src="../img/assets/icons/arrow-back.svg", alt="back to start page")
+					span к выбору ресторана
+				
+	.main-products
+		h1.menu-item-header Выпечка
+		h1.menu-item-header Хинкали
+		h1.menu-item-header Чебуреки
+		h1.menu-item-header Пончики
+		
+		ul.products.columns-3
+			include ../card
+
+	//попап для qr кодов
+	//- .popup-ads
+		.popup-close-btn
+			a(href="#") 
+				img(src="../img/assets/close_24dp.svg", alt="close")
+	
+		h1 Получите бонусную карту в свой смартфон
+
+		ul.action-block
+			li
+				img(src="../img/assets/link.svg", alt="link")
+				a(href="#") Перейдите по ссылке
+			li
+				img(src="../img/assets/form.svg", alt="form")
+				a(href="#") Заполните web-анкету
+			li
+				img(src="../img/assets/card.svg", alt="card")
+				a(href="#") Добавьте карту
+
+		h2 Теперь ваша карта в приложении Wallet или Wallet Passes
+		
+		button(type="button").button.select-rest-start-page-btn Закрыть

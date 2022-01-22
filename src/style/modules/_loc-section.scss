@@ -1,0 +1,136 @@
+.loc-section {
+	height: 100%;
+}
+
+.loc-section .content {
+	position: relative;
+	display: grid;
+	height: 100%;
+	@media (min-width: $b-medium) {
+		grid-template-columns: repeat(2, 1fr);
+		// grid-auto-rows: 40vh;
+		// grid-auto-rows: 50vh;
+		background-color: ac(third);
+	}
+	@media (min-width: $b-large) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+.loc-section .item {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2rem 2rem 5rem;
+	position: relative;
+	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		background-image: url(../img/assets/point2.png);
+		background-size: 1.5rem;
+		background-repeat: no-repeat;
+		width: 2.2rem;
+		height: 5.3rem;
+	}
+}
+
+.loc-section .header {
+	align-items: center;
+}
+
+.loc-section .item {
+	& .bg-image {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		transition: .66s ease-in-out;
+		width: 100%;
+		height: 100%;
+		z-index: -2;
+		object-fit: cover;
+		object-position: center;
+		display: none;
+		@media (min-width: $b-medium) {
+			display: block;
+		}
+	}
+	&:hover {
+		& .bg-image {
+			width: 105%;
+			height: 105%;
+		}
+		& .blackout {
+			// background-color: rgba(0,0,0,.75);
+		}
+	}
+}
+
+//затемнение
+.loc-section .item .blackout {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.5);
+	@media (min-width: $b-medium) {
+		display: block;
+	}
+}
+
+//ссылка для контента
+.loc-section .item {
+	& a {
+		z-index: 1;
+		& ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			text-align: center;
+			// margin-top: 4rem;
+			@media (min-width: $b-medium){
+				& li {
+					color: white;
+				}
+				& li:first-child {
+					font-size: 3.75rem;
+					font-weight: 700;
+				}
+			}
+		}
+		@media (min-width: $b-medium) {
+			text-decoration-color: white;
+		}
+	}
+}
+
+//ячейки заголовки ресторан-лавки
+.loc-section .header {
+	& .logo img {
+		display: block;
+		margin: 0 auto;
+		margin-top: 4rem;
+		width: 30rem;
+		opacity: 0.87;
+	}
+	& h1 {
+		font-size: 5.5rem;
+		text-align: center;
+	}
+}
+
+.loc-section .item .bg-img-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 0;
+}

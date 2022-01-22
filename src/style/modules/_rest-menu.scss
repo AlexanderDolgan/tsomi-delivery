@@ -1,0 +1,269 @@
+main .rest-nav {
+	& .menu-category {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+main .rest-nav .separator {
+	height: 0.125rem;
+	background-color: ac(black);
+	margin: 3rem 0 4rem;
+}
+
+main .menu-category > li {
+		font-size: 4rem;
+		&:nth-child(2) {
+			margin-top: 3rem;
+		}
+}
+
+main .menu-content {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	margin-top: 1rem;
+	& li a {
+		display: block;
+		font-size: 2.25rem;
+		text-decoration: none;
+		padding: 1rem 0;
+		&:hover {
+			background-color: ac(lightgray);
+		}
+	}
+	& .active a {
+		font-weight: 700;
+		text-decoration: underline;
+	}
+}
+
+main .rest-nav .rest-nav-footer {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	& li a {
+		display: block;
+		padding: 1rem 0;
+		font-size: 2rem;
+		&:hover {
+			background-color: ac(lightgray);
+		}
+	}
+	& .address {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		margin-bottom: 1rem;
+		& a {
+			padding: .5rem;
+		}
+	}
+	& .logo-guliani {
+		max-width: 17.25rem;
+		margin-top: 2rem;
+		&:hover {
+			background-color: transparent;
+		}
+	}
+	& .btn-back {
+		display: flex;
+		flex-flow: row nowrap;
+		margin-top: 4rem;
+			& img {
+				width: 3rem;
+				height: 3rem;
+				margin-right: .75rem;
+			}
+			& span {
+				font-size: 2rem;
+				line-height: 1.5;
+			}
+		}
+}
+
+
+.main-products .menu-item-header {
+	font-size: 4rem;
+	text-transform: uppercase;
+	font-family: $second-font-family;
+	text-decoration: underline;
+	&:nth-child(n+2) {
+		margin-top: 4rem;
+		@media (min-width: $b-xlarge) {
+			margin-top: 9rem;
+		}
+	}
+	@media (min-width: $b-medium) {
+		font-size: 6rem;
+	}
+}
+
+// cards
+ul.products {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+//category page
+
+.categories-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(6, minmax(15rem,30rem));
+	grid-gap: 2rem;
+	grid-auto-flow: dense;
+	@media (min-width: $b-medium) {
+		grid-gap: 3rem;
+		grid-template-columns:  repeat(4, 1fr);
+	}
+	@media (min-width: $b-large) {
+		grid-template-rows: repeat(6, minmax(30rem,43rem));
+	}
+}
+
+.categories-list {
+	& li {
+		position: relative;
+		&:hover img {
+			filter: brightness(.5) saturate(1.25);
+		}
+		&:hover span {
+			text-decoration: underline;
+		}
+	}
+	& span {
+		position: absolute;
+		font-family: $second-font-family;
+		font-size: 6rem;
+		text-shadow: 4px 4px 0px ac(black);
+		color: white;
+		z-index: 1;
+		letter-spacing: .5rem;
+		@media (min-width: $b-xlarge) {
+			font-size: 12.5rem;
+		}
+	}
+}
+
+.categories-list img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: all .33s ease-in-out;
+}
+
+.vipechka {
+	& span {
+		top: 2.5rem;
+		left: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		grid-column: 1 / span 2;
+		& span {
+			top: 4rem;
+			left: 4rem;
+		}
+	}
+}
+
+.khinkali {
+	& span {
+		top: 2.5rem;
+		right: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		grid-column: 3 / span 2;
+		grid-row: 1 / span 2;
+		& span {
+			top: 4rem;
+			left: 4rem;
+		}
+	}
+}
+
+.ponchik {
+	& span {
+		bottom: 2.5rem;
+		left: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		grid-column: 1 / span 2;
+		grid-row: 2 / span 2;
+		& span {
+			top: 4rem;
+			left: 4rem;
+		}
+	}
+}
+
+.soup {
+	& span {
+		bottom: 2.5rem;
+		right: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		& span {
+			bottom: 4rem;
+			left: 4rem;
+			font-size: 4rem;
+		}
+	}
+	@media (min-width: $b-xlarge) {
+		& span {
+			font-size: 7rem;
+		}
+	}
+}
+
+.main-dishes {
+	& span {
+		bottom: 2.5rem;
+		left: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		& span {
+			bottom: 4rem;
+			left: 4rem;
+			font-size: 4rem;
+		}
+	}
+	@media (min-width: $b-xlarge) {
+		& span {
+			font-size: 7rem;
+		}
+	}
+}
+
+.cheburek {
+	& span {
+		bottom: 2.5rem;
+		right: 1.5rem;
+	}
+	@media (min-width: $b-medium) {
+		grid-column: 1 / span 4;
+		grid-row: 4 / span 2;
+		& span {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
+
+.drinks {
+	@media (min-width: $b-medium) {
+		grid-column: 1 / span 4;
+	}
+	& span {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
