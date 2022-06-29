@@ -1,0 +1,34 @@
+.text {
+	@include border(primary);
+	@include wrapper($bg-color: ac(primary));
+}
+
+.text article {
+	& h1 {
+		text-align: center;
+	}
+	& p {
+		margin: 2rem auto 0;
+	}
+}
+
+@media (min-width: $b-medium) {
+	.text article {
+		margin: 0 auto;
+		width: percentage(math.div(10, 12));
+	}
+}
+
+@media (min-width: $b-xlarge) {
+	.text article {
+		width: percentage(math.div(8, 12));
+		& h1 {
+			max-width: 100rem;
+			margin: 0 auto;
+		}
+		& p {
+			columns: 2;
+			column-gap: 2rem;
+		}
+	}
+}

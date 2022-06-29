@@ -7,17 +7,48 @@
   }
 }
 
-//container mixin with max width
-@mixin container ($pad-vert-small:8rem, $pad-vert:16rem, $max-width: $container) {
+//wrapper mixin
+//$pad-vert-small - top and bottom paddings on small screens
+//$pad-vert - top and bottom paddings on large screens
+//$max-width - wrapper max width
+//$bg-color - wrapper background color
+@mixin wrapper ($pad-vert:4rem, $pad-vert-large:8rem, $pad-hor:2rem, $bg-color: none) {
 	position: relative;
 	width: 100%;
-	max-width: $max-width;
-	margin: 0 auto;
-	padding: $pad-vert-small 0;
+	padding: $pad-vert $pad-hor;
+	background-color: $bg-color;
 	@media (min-width: $b-large) {
-		padding: $pad-vert 2rem;
+		padding: $pad-vert-large $pad-hor;
 	}
 	// @include clearfix;
+}
+
+//container mixin for top and bottom border by pseudo-classes after and before. for container need to set position: relative rule
+//$color - border color. Using in image file name, top_white.png
+//$height - border height
+@mixin border($color, $height: 2.5rem) {
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: $height;
+		background-image: url('../../img/assets/top_' + $color + '.png');
+		top: -2.5rem;
+		left: 0;
+		z-index: 1;
+	}
+	&::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: $height;
+		background-image: url('../../img/assets/bot_' + $color + '.png');
+		bottom: -2.5rem;
+		left: 0;
+		z-index: 1;
+	}
 }
 
 
@@ -30,9 +61,3 @@
 	font-size: 0;
 	display: block;
 }
-
-// @mixin bg-image($padding-top: 100%) {
-// 	min-width: 100%;
-// 	height: auto;
-// 	display: block;
-// }

@@ -1,2 +1,2 @@
-# tsomi-delivery
- tsomi fast casual грузинской кухни
+# ojakhuri-main
+ ojakhuri fast casual грузинской кухни

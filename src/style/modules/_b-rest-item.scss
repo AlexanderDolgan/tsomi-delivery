@@ -1,0 +1,110 @@
+.b-rest-item {
+  @include wrapper($pad-hor:0);
+}
+
+.b-rest-item .b-rest-item-info {
+  @media(min-width: $b-medium) {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 2rem;
+    gap: 2rem;
+  }
+  @media(min-width: $b-xlarge) {
+    padding: 0;
+  }
+  @media(min-width: $b-xxlarge) {
+    gap: 3rem;
+    padding: 0;
+  }
+}
+
+.b-rest-item-header {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  @include border(primary);
+  background-color: ac(primary);
+  & .container {
+    max-width: 119rem;
+  }
+}
+
+.b-rest-item-info .info-card {
+  margin-top: 8rem;
+  padding: 0 2rem;
+  @media(min-width: $b-medium) {
+    width: calc(percentage(math.div(6, 12)) - 1rem);
+    padding: 0;
+  }
+  @media(min-width: $b-medium) {
+    width: calc(percentage(math.div(4, 12)) - 2rem);
+  }
+  & img {
+    width: 100%;
+    border-radius: 4rem;
+  }
+}
+
+.b-rest-item-info .info-card .b-text {
+  display: flex;
+  flex-flow: row wrap;
+  padding-top: 4rem;
+  & .header {
+    width: 100%;
+    & p {
+      padding-top: 2rem;
+    }
+  }
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      margin-top: 3rem;
+      & h2 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.b-restitem-divider {
+  margin: 8rem auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  @media (min-width: $b-xlarge) {
+    padding: 0;
+  }
+  & .line {
+    height: .125rem;
+    width: 100%;
+    background-color: ac(black);
+  }
+  & img {
+    margin: 0 4rem;
+    @media (min-width: $b-medium) {
+      margin: 0 8rem;
+    }
+  }
+}
+
+.b-info-rest-footer {
+  padding: 0 2rem;
+  & ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    & li {
+      @extend .headline-2;
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
+}
+
+.b-info-rest-quote {
+  @extend .b-info-rest-footer;
+  margin: 8rem auto;
+}

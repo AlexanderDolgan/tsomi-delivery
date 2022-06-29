@@ -10,22 +10,22 @@ $variations: (
   ),
   tint: (
     function: mix,
-		parameters:white 90%
+		parameters:white 80%
   ),
   shade: (
     function: mix,
-		parameters: black 90%
+		parameters: black 80%
 	)
 );
 
 $saturations: (
 	sat: (
 		function: saturate,
-		parameters: 5%
+		parameters: 15%
 	),
 	desat: (
 		function: desaturate,
-		parameters: 5%
+		parameters: 15%
 	),
 );
 

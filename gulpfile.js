@@ -42,10 +42,11 @@ const config = {
 	server: {
 		baseDir: "./build"
 	},
-	//tunnel: true,
-	host: 'localhost',
-	port: 8888,
-	logPrefix: "tsomi-delivery"
+	// tunnel: true,
+	host: "localhost",
+	// injectChanges: true,
+	logPrefix: "ojakhuri",
+	port:8888
 };
 
 function reload(done) {

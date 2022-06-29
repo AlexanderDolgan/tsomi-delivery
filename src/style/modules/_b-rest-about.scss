@@ -1,0 +1,105 @@
+.b-rest-about {
+  @include wrapper($pad-hor:0);
+}
+
+.b-rest-about .info {
+  position: relative;
+  padding: 8rem 2rem;
+  text-align: center;
+  @include border(primary);
+  background-color: ac(primary);
+  & p {
+    @extend .subtitle;
+    padding-top: 2rem;
+  }
+  & .container {
+    max-width: 119rem;
+  }
+}
+
+.b-rest-about .text-block {
+  padding: 8rem 2rem;
+  margin: 0 auto;
+  .top {
+    & p {
+      padding-top: 2rem;
+    }
+  }
+  .bot {
+    margin-top: 4rem;
+  }
+  @media (min-width: $b-xlarge) {
+    max-width: percentage(math.div(10, 12));
+  }
+  @media (min-width: $b-xxxlarge) {
+    max-width: percentage(math.div(8, 12));
+  }
+}
+
+.bot .b-text {
+  display: flex;
+  flex-flow: row wrap;
+  @media (min-width: $b-medium) {
+    flex-flow: row nowrap;
+    gap: 3rem;
+  }
+  @media (min-width: $b-xlarge) {
+    margin-top: 4rem;
+  }
+}
+
+.bot .b-text .text-item {
+  margin-top: 3rem;
+  & p {
+    margin-top: 2rem;
+  }
+  @media (min-width: $b-medium) {
+    width: percentage(math.div(6, 12));
+  }
+}
+
+.staff .container p {
+  @media (min-width: $b-xlarge) {
+    max-width: percentage(math.div(10, 12));
+  }
+  @media (min-width: $b-xxxlarge) {
+    max-width: percentage(math.div(8, 12));
+  }
+}
+
+
+.staff .staff-gallery {
+  display: flex;
+  flex-flow: row wrap;
+  @include wrapper($pad-vert:0);
+  margin: 0 auto;
+  @media (min-width: $b-medium) {
+    gap: 1rem;
+    flex-flow: row nowrap;
+  }
+  @media (min-width: $b-xlarge) {
+    padding: 4rem 0;
+  }
+  & img {
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    // clip-path: url(#svgPath);
+    &:nth-child(3) {
+      display: none;
+    }
+    @media (min-width: $b-xlarge) {
+      &:nth-child(3) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.staff p {
+  padding: 2rem 2rem 0;
+  margin: 0 auto;
+  @media (min-width: $b-xlarge) {
+    max-width: percentage(math.div(10, 12));
+  }
+}

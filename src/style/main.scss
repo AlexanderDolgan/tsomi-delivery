@@ -1,46 +1,41 @@
 /*
-Theme Name: page20
-Author: AD
+Theme Name: grossmetall
+Author: Alexander Dolgan
 Author URI:
 Version: 1.0
 */
 
-// @font-face {
-// 	font-family: 'kazimir';
-// 	src: url('../CSTMFontsKazimir.woff') format('woff');
-// 	font-weight: normal;
-// 	font-style: normal;
-// }
-
 @use "sass:math";
 
-@font-face {
-	font-family: 'tsomi-regular';
-	src: url('../fonts/tsomi-regular.woff') format('woff');
+@font-face { 
+	font-family: Kazimir;
+	src:url(../fonts/CSTMFontsKazimir.eot);
+	src:url(../fonts/CSTMFontsKazimir.eot) format("embedded-opentype"),url(../fonts/CSTMFontsKazimir.woff2) format("woff2"),url(../fonts/CSTMFontsKazimir.woff) format("woff"),url(../fonts/CSTMFontsKazimir.ttf) format("truetype"),url(../fonts/CSTMFontsKazimir.svg#CSTMFontsKazimir) format("svg")
+}
+
+@font-face { 
+	font-family:Circe;
+	src:url(../fonts/CRC35.eot);src:url(../fonts/CRC35.eot) format("embedded-opentype"),url(../fonts/CRC35.woff2) format("woff2"),url(../fonts/CRC35.woff) format("woff"),url(../fonts/CRC35.ttf) format("truetype"),url(../fonts/CRC35.svg#CRC35) format("svg")
 }
 
 @font-face {
-	font-family: 'tsomi-bold';
-	src: url('../fonts/tsomi-bold.woff') format('woff');
+	font-family:Circe-Bold;
+	src:url(../fonts/Circe-Bold.eot);src:url(../fonts/Circe-Bold.eot) format("embedded-opentype"),url(../fonts/Circe-Bold.woff2) format("woff2"),url(../fonts/Circe-Bold.woff) format("woff"),url(../fonts/Circe-Bold.ttf) format("truetype"),url(../fonts/Circe-Bold.svg#Circe-Bold) format("svg")
 }
 
-@font-face {
-	font-family: 'tsomi-italic';
-	src: url('../fonts/tsomi-itallic.woff') format('woff');
-}
-
-// @use 'util/settings';
-// @forward 'util/settings';
+@import "../../bower_components/slick-master/slick/slick.scss";
+@import "../../bower_components/slick-master/slick/slick-theme.scss";
 
 //settings-var
 @import "util/function";
-@import "util/settings"; //vars
+@import "util/settings";
 @import "util/mixin";
+
 //sprites
 @import "util/sprite";
 
 //base
-@import "base/base"; //main settings ressets
+@import "base/base";
 
 //layout
 @import "layout/index";
@@ -51,8 +46,3 @@ Version: 1.0
 //states
 @import "states/index";
 
-@import "../../bower_components/lightgallery/src/sass/lightgallery.scss";
-
-.lg-download {
-	display: none;
-}

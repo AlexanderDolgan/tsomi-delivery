@@ -1,12 +1,16 @@
-@import 'btn'; // buttons
-@import 'form';
-@import 'nav';
+//navigation
+@import 'preloader';
+@import 'hero';
 
-@import 'header';
-@import 'site-footer';
-@import 'shield';
-@import 'rest-menu';
-@import 'form';
-@import 'popup';
+@import 'text';
+@import 'news';
+
 @import 'btn';
-@import 'card';
+@import 'form';
+
+@import 'footer';
+
+//bankets
+@import 'b-header';
+@import 'b-rest-about';
+@import 'b-rest-item';

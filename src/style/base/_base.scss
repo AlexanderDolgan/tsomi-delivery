@@ -1,4 +1,4 @@
-// base ressets and settings
+//@include normalize();
 
 *, *+*, *::before, *::after {
 	box-sizing: border-box;
@@ -7,12 +7,7 @@
 html {
 	width: 100%;
 	height: 100%;
-	// min-height: 100%;
 	font-size: $global-font-size;
-	// @media (min-width: $b-medium) {
-	// 	height: auto;
-	// }
-	letter-spacing: 0.05rem;
 }
 
 body {
@@ -22,6 +17,7 @@ body {
 	line-height: $global-line-height;
 	background-color: $body-background;
 	-webkit-font-smoothing: $font-smooth;
+	background-color: ac(white);
 	color: ac(text);
 	margin: 0;
 	padding: 0;
@@ -35,14 +31,9 @@ a {
 	&:hover,
 	&:active,
 	&:focus {
-		color: ac(black, shade);
+		// color: ac(primary, shade, sat);
 		text-decoration: underline;
 	}
-}
-
-button {
-	font-family: $global-font-family;
-	outline: none;
 }
 
 //Address
@@ -54,8 +45,8 @@ address {
 // Paragraphs
 p {
 	line-height: $paragraph-lineheight;
-	margin-bottom: 0;
-	margin-top: 2rem;
+	margin: 0;
+	// margin-top: 4rem;
 }
 
 // Headings
@@ -75,21 +66,18 @@ h6 {
 }
 
 
-h1 {font-size: 45px;}
-h2 {font-size: 30px;}
-h3 {font-size: 18px;}
-h4 {font-size: 16px;}
+h1 {font-size: 32px; font-weight: 500;} // Title
+h2 {font-size: 24px;} // Headline
+h3 {font-size: 20px;} // Headline-2
+h4 {font-size: 16px;} // Subtitle
 h5 {font-size: 14px;}
 h6 {font-size: 14px;}
 
 @media (min-width: $b-medium) {
-	h1 {font-size: 56px;}
-	h3 {font-size: 18px;}
-}
-
-@media (min-width: $b-xxlarge) {
-	h1 {font-size: 72px;}
-	h2 {font-size: 36px;}
+	h1 {font-size: 40px;} // Title
+	h2 {font-size: 32px;} // Headline
+	h3 {font-size: 24px;} // Subtitle
+	h4 {font-size: 20px;} // Subtitle
 }
 
 //Bloquote
@@ -119,13 +107,55 @@ dd {
 	margin: 0;
 }
 
-img {
-	// background-color: ac(third, shade, sat);
-	// animation: show 2s;
-	// animation-iteration-count: 1;
+
+//typography test
+
+.title {
+	font-size: 32px;
+	font-family: $second-font-family;
 }
 
-@keyframes show {
-  from {opacity: 0;}
-  to {opacity:1;}
+.headline {
+	font-size: 24px;
+	font-family: $second-font-family;
+}
+
+.headline-2 {
+	font-size: 20px;
+	font-family: $second-font-family;
+}
+
+.subtitle {
+	font-size: 16px;
+}
+
+.small {
+	font-size: 13px;
+}
+
+.caption {
+	font-size: 13px;
+}
+
+@media (min-width: $b-medium) {
+	.title {
+		font-size: 40px;
+	}
+	
+	.headline {
+		font-size: 32px;
+		
+	}
+	
+	.headline-2 {
+		font-size: 24px;
+	}
+	
+	.subtitle {
+		font-size: 20px;
+	}
+
+	.small {
+		font-size: 15px;
+	}
 }

@@ -1,0 +1,30 @@
+.b-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  @include wrapper();
+  padding-top: 2rem;
+  @media(min-width: $b-medium) {
+    padding: 4rem;
+  }
+}
+
+.b-header .oj-logo {
+  width: percentage(math.div(4, 6));
+  max-width: 37.5rem;
+  padding-top: 4rem;
+  @media(min-width: $b-xlarge) {
+    padding-top: 8rem;
+  }
+}
+
+.b-header .decor-left img,
+.b-header .decor-right img{
+  width: 7rem;
+  @media(min-width: $b-medium) {
+    width: 19rem;
+  }
+  @media(min-width: $b-xlarge) {
+    width: 27.5rem;
+  }
+}

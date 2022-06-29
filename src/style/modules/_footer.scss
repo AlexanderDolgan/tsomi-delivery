@@ -1,0 +1,14 @@
+#site-footer {
+	@include border(primary);
+	@include wrapper($bg-color: ac(primary));
+	&::after {
+		height: 0;
+	}
+}
+
+#site-footer {
+	& .logo {
+		margin: 0 auto;
+		max-width: 24rem;
+	}
+}
