@@ -5,13 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Ojakhuri - сеть ресторанов и кулинарных лавок грузинской кухни</title>
-    <link rel="stylesheet" href="//unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="./style/main.min.css"/>
   </head>
 </html>
 <body>
+  <div class="loader">
+    <div class="preloader">
+      <div class="lines">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <div class="loading-text">загрузка</div>
+    </div>
+  </div>
   <div id="site-wrapper">
-    <div class="hero">
+    <section class="hero">
       <div class="main-info">
         <div class="header">
           <div class="logo"><img src="/img/assets/brand/logo.svg" alt="Оджахури логотип"/></div>
@@ -41,7 +52,7 @@
           <li><a href="#">Наши новости</a></li>
         </ul>
       </div>
-    </div>
+    </section>
     <div class="main-content">
       <section class="text">
         <div class="container">
@@ -54,7 +65,7 @@
           </article>
         </div>
       </section>
-      <section class="news">
+      <section class="news" id="news">
         <div class="container">
           <div class="news-weapper">
             <div class="news-item">
@@ -117,8 +128,8 @@
       <div class="container">
         <div class="logo"><img src="/img/assets/brand/logo-vert.svg" alt="Оджахури лого"/></div>
       </div>
-      <script src="//unpkg.com/aos@next/dist/aos.js"></script>
-      <script src="/js/main.min.js"></script>
+      <script src="./js/main.min.js"></script>
+      <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     </section>
   </div>
 </body>

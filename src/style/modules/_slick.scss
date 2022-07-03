@@ -1,0 +1,84 @@
+.slick-prev {
+  left: 1rem;
+  z-index: 1;
+  @media(min-width: $b-medium) {
+    left: 3rem;
+  }
+  @media(min-width: $b-medium) {
+    left: 5rem;
+  }
+}
+
+.slick-next {
+  right: 1rem;
+  z-index: 1;
+  @media(min-width: $b-medium) {
+    right: 3rem;
+  }
+  @media(min-width: $b-medium) {
+    right: 5rem;
+  }
+}
+
+.slick-dots {
+  z-index: 1;
+  bottom: 1rem;
+  @media(min-width: $b-medium) {
+    bottom: 3rem;
+  }
+  @media(min-width: $b-medium) {
+    bottom: 5rem;
+  }
+}
+
+.slick-dots li {
+  width: 2rem;
+  height: 2rem;
+}
+
+.slick-dots li button::before {
+  font-size: 1.5rem;
+  opacity: 1;
+  @media(min-width: $b-medium) {
+    font-size: 2rem;
+  }
+}
+
+.slick-dots li.slick-active button::before {
+  color: ac(secondary);
+}
+
+.slick-track {
+  height: 100%;
+}
+
+.slick-list {
+  height: 40rem;
+  @media(min-width: $b-medium) {
+    height: 75rem;
+  }
+  @media(min-width: $b-xlarge) {
+    height: 110rem;
+  }
+}
+
+
+.slick-prev, .slick-next {
+  height: 100%;
+  width: 5rem;
+  @media(min-width: $b-xlarge) {
+    width: 10rem;
+  }
+}
+
+.slick-prev::before {
+  font-size: 8rem;
+  content: '‹';
+  display: block;
+}
+
+.slick-next::before {
+  font-size: 8rem;
+  content: '›';
+  display: block;
+}

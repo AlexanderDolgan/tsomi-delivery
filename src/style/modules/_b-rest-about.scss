@@ -2,6 +2,18 @@
   @include wrapper($pad-hor:0);
 }
 
+.b-slider-about {
+  overflow: hidden;
+}
+
+.b-slider-about-item {
+  & img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
+
 .b-rest-about .info {
   position: relative;
   padding: 8rem 2rem;
@@ -18,7 +30,7 @@
 }
 
 .b-rest-about .text-block {
-  padding: 8rem 2rem;
+  padding: 4rem 2rem;
   margin: 0 auto;
   .top {
     & p {
@@ -84,13 +96,19 @@
     width: 100%;
     margin-top: 1rem;
     border-radius: 3rem;
+    display: block;
+    height: 100%;
     // clip-path: url(#svgPath);
     &:nth-child(3) {
       display: none;
     }
+    @media (min-width: $b-medium) {
+      max-width: percentage(math.div(6, 12));
+    }
     @media (min-width: $b-xlarge) {
+      max-width: percentage(math.div(4, 12));
       &:nth-child(3) {
-        display: inline-block;
+        display: block;
       }
     }
   }

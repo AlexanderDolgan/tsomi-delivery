@@ -33,7 +33,7 @@
 		position: absolute;
 		width: 100%;
 		height: $height;
-		background-image: url('../../img/assets/top_' + $color + '.png');
+		background-image: url('../img/assets/top_' + $color + '.png');
 		top: -2.5rem;
 		left: 0;
 		z-index: 1;
@@ -44,7 +44,7 @@
 		position: absolute;
 		width: 100%;
 		height: $height;
-		background-image: url('../../img/assets/bot_' + $color + '.png');
+		background-image: url('../img/assets/bot_' + $color + '.png');
 		bottom: -2.5rem;
 		left: 0;
 		z-index: 1;
