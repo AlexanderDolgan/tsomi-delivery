@@ -10,22 +10,22 @@ $variations: (
   ),
   tint: (
     function: mix,
-		parameters:white 90%
+		parameters:white 80%
   ),
   shade: (
     function: mix,
-		parameters: black 90%
+		parameters: black 80%
 	)
 );
 
 $saturations: (
 	sat: (
 		function: saturate,
-		parameters: 5%
+		parameters: 15%
 	),
 	desat: (
 		function: desaturate,
-		parameters: 5%
+		parameters: 15%
 	),
 );
 
@@ -51,21 +51,21 @@ $saturations: (
     } @else {
       // make it easier to deal with nested map
       $this-variation: map-get($variations, $variation);
-			// $args = $function, $color
-      $args: join(map-get($this-variation, function), $color);
+      // get the function to call
+      $function: get-function(map-get($this-variation, function));
+      $args: $color;
       @if map-get($this-variation, parameters) {
-        // $args = $function, $colors, $parameters
         $args: join($args, map-get($this-variation, parameters));
-			}
-
-			//@return $args;
-      @return call($args...);
+      }
+      // call the function
+      @return call($function, $args...);
     }
-	}
+  }
 
   // no $variation, just return $color
   @return $color;
 }
+
 
 // main function get color from cv($color, $variation)
 // apply color adjastment - parameter $adjast-color
@@ -95,4 +95,10 @@ $saturations: (
 	}
 	// no $variation, just return $color
   @return $color;
+}
+
+//The to-rem function takes an input value in pixels and returns the equivalent value in rems. The calculation used is input value / base font size = result in rems.
+
+@function to-rem($px) {
+  @return $px / $global-font-size + rem;
 }

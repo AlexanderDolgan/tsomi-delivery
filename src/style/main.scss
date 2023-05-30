@@ -15,18 +15,13 @@ Version: 1.0
 @use "sass:math";
 
 @font-face {
-	font-family: 'tsomi-regular';
-	src: url('../fonts/tsomi-regular.woff') format('woff');
+	font-family: 'bellota-bold';
+	src: url('../fonts/bellota-bold.woff') format('woff');
 }
 
 @font-face {
-	font-family: 'tsomi-bold';
-	src: url('../fonts/tsomi-bold.woff') format('woff');
-}
-
-@font-face {
-	font-family: 'tsomi-italic';
-	src: url('../fonts/tsomi-itallic.woff') format('woff');
+	font-family: 'helvetica-roman';
+	src: url('../fonts/HelveticaNeueCyr-Roman.woff') format('woff');
 }
 
 // @use 'util/settings';
